@@ -1,0 +1,24 @@
+﻿<Window x:Class="Strompreisvergleich.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Strompreisvergleich"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Button Content="Generate Excel" Click="Button_GenerateExcel_Click" HorizontalAlignment="Left" Margin="697,18,0,0" VerticalAlignment="Top" Height="25"/>
+        <Button Content="Analyse" Click="Button_Analyse_Click" HorizontalAlignment="Left" Margin="631,18,0,0" VerticalAlignment="Top" Height="25"/>
+        <Label Background="LightGray" Content=".xls Datei hier droppen" AllowDrop="True" Drop="RectangleDropStrompreis_Drop" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <Label Content="Fixpreis in cent pro kWh" AllowDrop="True" Drop="RectangleDropStrompreis_Drop" HorizontalAlignment="Left" Margin="10,43,0,0" VerticalAlignment="Top"/>
+        <Label Name="labelResult" HorizontalAlignment="Left" Margin="100,120,0,0" VerticalAlignment="Top"/>
+        <DatePicker Name="datepickerFrom"  HorizontalAlignment="Left" Margin="334,19,0,0" VerticalAlignment="Top"/>
+        <DatePicker Name="datepickerTo" HorizontalAlignment="Left" Margin="479,19,0,0" VerticalAlignment="Top"/>
+        <DataGrid Name="datagridHaushalt" Margin="0,95,400,0"/>
+        <DataGrid x:Name="datagridWaermepumpe" Margin="400,95,0,0"/>
+        <Label Content="Haushalt" HorizontalAlignment="Left" Margin="136,70,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.347,-0.58"/>
+        <Label Content="Wärmepumpe" HorizontalAlignment="Left" Margin="556,70,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.547,-0.033"/>
+        <TextBox Name="textboxFixpreis" HorizontalAlignment="Left" Margin="154,45,0,0" TextWrapping="Wrap" Text="23" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="52" Height="24"/>
+
+    </Grid>
+</Window>
